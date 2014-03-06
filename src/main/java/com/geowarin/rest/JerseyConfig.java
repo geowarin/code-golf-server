@@ -1,4 +1,4 @@
-package com.geowarin.config;
+package com.geowarin.rest;
 
 import org.glassfish.jersey.filter.LoggingFilter;
 import org.glassfish.jersey.server.ResourceConfig;
@@ -8,7 +8,7 @@ public class JerseyConfig extends ResourceConfig {
 
     public JerseyConfig() {
         register(RequestContextFilter.class);
-        packages("com.geowarin.rest");
+        packages("com.geowarin");
         register(LoggingFilter.class);
     }
 }

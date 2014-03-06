@@ -1,4 +1,4 @@
-package com.geowarin.domain;
+package com.geowarin.task;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

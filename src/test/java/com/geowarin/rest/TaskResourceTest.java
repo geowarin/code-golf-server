@@ -1,6 +1,5 @@
 package com.geowarin.rest;
 
-import com.geowarin.config.JerseyConfig;
 import org.glassfish.jersey.test.JerseyTest;
 import org.json.JSONException;
 import org.junit.Test;

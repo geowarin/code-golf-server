@@ -1,7 +1,7 @@
 package com.geowarin;
 
-import com.geowarin.config.JerseyConfig;
-import com.geowarin.rest.TaskResource;
+import com.geowarin.rest.JerseyConfig;
+import com.geowarin.task.TaskResource;
 import org.glassfish.jersey.servlet.ServletContainer;
 import org.glassfish.jersey.servlet.ServletProperties;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;

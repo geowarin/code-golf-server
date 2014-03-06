@@ -1,5 +1,6 @@
 package com.geowarin.rest;
 
+import com.geowarin.task.TaskResource;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
