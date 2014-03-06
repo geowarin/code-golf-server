@@ -1,5 +1,6 @@
 package com.geowarin;
 
+import com.geowarin.redirect.RedirectResource;
 import com.geowarin.rest.JerseyConfig;
 import com.geowarin.task.TaskResource;
 import org.glassfish.jersey.servlet.ServletContainer;
@@ -17,7 +18,7 @@ import org.springframework.context.annotation.ComponentScan;
  * @author Geoffroy Warin (http://com.geowarin.github.io)
  */
 @EnableAutoConfiguration
-@ComponentScan(basePackageClasses = {TaskResource.class})
+@ComponentScan(basePackageClasses = {RedirectResource.class, TaskResource.class})
 public class Application {
 
     public static void main(String[] args) throws Exception {

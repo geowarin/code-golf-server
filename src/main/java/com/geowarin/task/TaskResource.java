@@ -14,16 +14,16 @@ import java.util.List;
 public class TaskResource {
 
     @GET
-    @Produces(MediaType.TEXT_PLAIN)
-    @Path("/hello")
-    public String hello() {
-        return "hello";
-    }
-
-    @GET
     @Produces(MediaType.APPLICATION_JSON)
     @Path("/list.json")
     public List<Task> listTasks() {
         return Arrays.asList(new Task("geowarin"));
+    }
+
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    @Path("/profiles.json")
+    public String activeProfiles() {
+        return System.getProperty("spring.profiles.active");
     }
 }
