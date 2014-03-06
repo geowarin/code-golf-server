@@ -19,16 +19,11 @@ import org.springframework.core.env.SimpleCommandLinePropertySource;
  * @author Geoffroy Warin (http://com.geowarin.github.io)
  */
 @EnableAutoConfiguration
-@ComponentScan(basePackageClasses = {RedirectResource.class, TaskResource.class})
+@ComponentScan(basePackageClasses = {Application.class})
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        SpringApplicationBuilder application = new SpringApplicationBuilder(Application.class).showBanner(false);
-
-        if (!new SimpleCommandLinePropertySource(args).containsProperty("spring.profiles.active")) {
-            application.profiles("dev");
-        }
-        application.run(args);
+        new SpringApplicationBuilder(Application.class).showBanner(false).run(args);
     }
 
     @Bean

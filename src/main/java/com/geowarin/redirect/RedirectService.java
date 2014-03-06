@@ -10,7 +10,7 @@ public interface RedirectService {
     String getRedirectUrl(URI baseUri);
 
     @Service
-    @Profile("dev")
+    @Profile("default")
     public class DevRedirectService implements RedirectService {
 
         @Override

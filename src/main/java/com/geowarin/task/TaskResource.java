@@ -19,11 +19,4 @@ public class TaskResource {
     public List<Task> listTasks() {
         return Arrays.asList(new Task("geowarin"));
     }
-
-    @GET
-    @Produces(MediaType.APPLICATION_JSON)
-    @Path("/profiles.json")
-    public String activeProfiles() {
-        return System.getProperty("spring.profiles.active");
-    }
 }
