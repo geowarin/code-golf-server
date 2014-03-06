@@ -10,15 +10,6 @@ public interface RedirectService {
     String getRedirectUrl(URI baseUri);
 
     @Service
-    public class DefaultRedirectService implements RedirectService {
-
-        @Override
-        public String getRedirectUrl(URI baseUri) {
-            return "default";
-        }
-    }
-
-    @Service
     @Profile("dev")
     public class DevRedirectService implements RedirectService {
 

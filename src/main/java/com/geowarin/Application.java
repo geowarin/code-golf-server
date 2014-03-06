@@ -10,6 +10,7 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.context.embedded.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.core.env.SimpleCommandLinePropertySource;
 
 /**
  * Date: 22/12/13
@@ -22,9 +23,12 @@ import org.springframework.context.annotation.ComponentScan;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        new SpringApplicationBuilder(Application.class)
-                .showBanner(false)
-                .run(args);
+        SpringApplicationBuilder application = new SpringApplicationBuilder(Application.class).showBanner(false);
+
+        if (!new SimpleCommandLinePropertySource(args).containsProperty("spring.profiles.active")) {
+            application.profiles("dev");
+        }
+        application.run(args);
     }
 
     @Bean
