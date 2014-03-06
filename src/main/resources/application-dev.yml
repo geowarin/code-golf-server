@@ -1,0 +1,5 @@
+server:
+    port: 9001
+#   address=<another IP address>
+#   sessionTimeout=<another timeout setting>
+#   contextPath=/your-other-path
