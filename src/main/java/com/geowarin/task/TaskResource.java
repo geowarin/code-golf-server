@@ -2,6 +2,7 @@ package com.geowarin.task;
 
 import org.springframework.stereotype.Component;
 
+import javax.inject.Inject;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
@@ -13,10 +14,14 @@ import java.util.List;
 @Component
 public class TaskResource {
 
+    @Inject
+    private TaskRepository taskRepository;
+
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     @Path("/list.json")
     public List<Task> listTasks() {
-        return Arrays.asList(new Task("geowarin"));
+        return taskRepository.findAll();
+//        return Arrays.asList(new Task("geowarin"));
     }
 }
